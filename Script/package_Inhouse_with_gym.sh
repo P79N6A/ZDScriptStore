@@ -14,7 +14,8 @@ nowTime=$(date +"%Y_%m_%d_%H_%M_%S")
 current_user=$(logname)
 
 #指定项目的scheme名称
-scheme="DDReaderPlus"
+scheme="xxxxxxx"
+workspace_name="xxxxxxxxxxxxx"
 
 #指定要打包的配置名
 configuration="Release"
@@ -22,9 +23,9 @@ configuration="Release"
 export_method='enterprise'
 
 #指定项目地址
-workspace_path="$project_path/$scheme.xcworkspace"
+workspace_path="$project_path/$workspace_name.xcworkspace"
 #指定输出路径,如果不存在则创建一个
-output_path="/Users/$current_user/Desktop/IPA_DDReader"
+output_path="/Users/$current_user/Desktop/IPA"
 if [[ ! -d $output_path ]]; then
 	mkdir $output_path
 fi
