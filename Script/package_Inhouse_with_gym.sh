@@ -2,6 +2,7 @@
 
 #使用此脚本的前提条件是安装了fastlane和gym以及shenzhen(安装shenzhen命令行：sudo gem install --bin /usr/local/bin/ shenzhen),
 #前2者用来编译打包,后者用来上传到蒲公英
+#参考：https://github.com/xilin/ios-build-script
 
 #计时
 SECONDS=0
@@ -24,7 +25,7 @@ export_method='enterprise'
 
 #指定项目地址
 workspace_path="$project_path/$workspace_name.xcworkspace"
-#指定输出路径,如果不存在则创建一个
+#指定输出路径(此处是输出到桌面),如果不存在则创建一个
 output_path="/Users/$current_user/Desktop/IPA"
 if [[ ! -d $output_path ]]; then
 	mkdir $output_path
